@@ -1,0 +1,28 @@
+{
+  "target": "active_power",
+  "target_unit": "kW",
+  "features": [
+    "wind_speed",
+    "theoretical_power",
+    "dir_sin",
+    "dir_cos"
+  ],
+  "selected_model": "linear_regression",
+  "all_results": {
+    "linear_regression": {
+      "mae": 254.061,
+      "rmse": 462.932,
+      "r2": 0.8881
+    },
+    "random_forest": {
+      "mae": 325.823,
+      "rmse": 667.81,
+      "r2": 0.7671
+    }
+  },
+  "train_rows": 35371,
+  "val_rows": 7579,
+  "test_rows": 7580,
+  "data_source": "Kaggle Wind Turbine SCADA Dataset (berkerisen), T1.csv, full year 2018",
+  "notes": "theoretical_power is a deterministic function of wind_speed (manufacturer power curve), not derived from the actual target, so it does not leak the label."
+}

@@ -1,0 +1,30 @@
+{
+  "target": "AC_POWER",
+  "target_unit": "kW",
+  "features": [
+    "IRRADIATION",
+    "AMBIENT_TEMPERATURE",
+    "MODULE_TEMPERATURE",
+    "hour_sin",
+    "hour_cos",
+    "is_plant_2"
+  ],
+  "selected_model": "random_forest",
+  "all_results": {
+    "linear_regression": {
+      "mae": 1405.741,
+      "rmse": 2182.165,
+      "r2": 0.9053
+    },
+    "random_forest": {
+      "mae": 501.248,
+      "rmse": 1352.251,
+      "r2": 0.9636
+    }
+  },
+  "train_rows": 4490,
+  "val_rows": 961,
+  "test_rows": 965,
+  "data_source": "Kaggle Solar Power Generation Data (anikannal) - Plant 1 & 2, 15 May-17 Jun 2020",
+  "notes": "Excluded DC_POWER, DAILY_YIELD, TOTAL_YIELD as features (target leakage)."
+}
